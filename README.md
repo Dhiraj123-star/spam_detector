@@ -1,6 +1,4 @@
 
----
-
 # 📧 Spam Detector API
 
 A simple **spam detection application** that classifies SMS messages as **spam** (unwanted) or **ham** (genuine), powered by **FastAPI**.
@@ -12,6 +10,7 @@ A simple **spam detection application** that classifies SMS messages as **spam**
 * **Naive Bayes model** trained on the SMS Spam Collection dataset
 * REST API built with **FastAPI** and interactive Swagger UI
 * Containerized with **Docker** and ready-to-run using **Docker Compose**
+* Integrated **CI/CD pipelines with GitHub Actions** for automated build, test, and deployment
 * Predicts whether an input message is **spam** or **ham**
 
 ---
@@ -29,6 +28,7 @@ A simple **spam detection application** that classifies SMS messages as **spam**
 2. Train a **Naive Bayes classifier**
 3. Serve predictions through a **FastAPI endpoint**
 4. Access via Swagger UI at `http://localhost:8000/docs`
+5. Automate build, test, and deploy with **CI/CD pipelines**
 
 ---
 
@@ -39,11 +39,13 @@ A simple **spam detection application** that classifies SMS messages as **spam**
   ```bash
   docker-compose up --build
   ```
+
 * Open Swagger UI:
 
   ```
   http://localhost:8000/docs
   ```
+
 * Test a message:
 
   * `"Congratulations! You've won a $1,000 Walmart gift card."` → **spam**
@@ -51,3 +53,10 @@ A simple **spam detection application** that classifies SMS messages as **spam**
 
 ---
 
+## ⚡ CI/CD Pipelines
+
+* Built with **GitHub Actions**
+* Automatically triggered on each push or pull request
+* Workflow steps: **install dependencies → run tests → build Docker image → push to registry → deploy**
+
+---
