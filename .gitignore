@@ -38,3 +38,6 @@ SMSSpamCollection
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# models files
+*.pkl
